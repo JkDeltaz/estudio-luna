@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    background-color: #EFEAF6;
+    font-family: Roboto Slab;
+}
+
+.topnav{
+    background-color: #5E4A7E;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.topnav nav{
+    margin-left: 53%
+}
+
+.topnav h1{
+    margin-left: 2%;
+}
+
+.topnav a{
+    padding: 20px;
+    margin-left: 10px;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.topnav a:hover{
+    color: #DCD2E8;
+}
