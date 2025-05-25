@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SOBRE NÓS </title>
+        <link rel="icon" type="https://harvstrom.neocities.org/fabiocon2.png" 
+        href="https://harvstrom.neocities.org/fabiocon2.png">
+    <link rel="static/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <header class="topnav">
+        <h1> <a href="/home/index"> Estúdio Luna </a></h1>
+         <nav id="teleport">
+            <a href="/jogos">Jogos</a>
+            <a href="/sobrenos">Sobre nós</a>
+            <a href="/download">Devlog</a>
+        </nav>
+    </header>
+
+
+    <section class="novidades">
+     <h1> EQUIPE OFICIAL </h1>
+        <article>
+            <h2>JkDelta (Programação)</h2>
+            <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac iaculis dolor. Praesent 
+porta fringilla eros, nec malesuada magna pharetra in. Proin quis libero facilisis, tristique 
+nulla non, tincidunt nunc. Fusce dignissim commodo arcu vitae dapibus. Morbi convallis orci nunc, 
+quis pellentesque enim varius vitae. Etiam pretium libero quis dapibus hendrerit. Sed et sapien in 
+urna tincidunt fermentum.
+<br>
+Fusce sollicitudin, lacus eu imperdiet rhoncus, velit orci condimentum felis, varius congue arcu 
+neque non nisi. Sed mollis, felis et vehicula dapibus, lacus quam hendrerit risus, ut tempor dui 
+dui vitae leo. Curabitur et dolor ac nibh elementum aliquet. Nullam enim lacus. 
+            </p>
+            <img src="https://thumbs.dreamstime.com/b/programador-inform%C3%A1tico-ou-estudante-de-programa%C3%A7%C3%A3o-em-linha-um-jovem-com-cabelos-longos-e-fones-ouvido-use-uma-pintura-neon-203280344.jpg" 
+            alt="Girl in a jacket" width="200" height="200"> 
+        </article>
+         <article>
+            <h2>Scareev (Música)</h2>
+            <p>Músico da equipe des de 2022, ele também ajuda as vezes nas artes como na digitalização.
+                Ele fez as artes do Through the Dungeon, mas depois só focou na área sonora dos jogos.
+                <br>
+                Conheça as trilhas sonoras dos jogos do Luna no canal oficial do Scareev!
+                <br>
+            </p>
+            <img src="https://harvstrom.neocities.org/eu.png" width="200" height="200">
+            <a href="https://www.youtube.com/@Scareev" id="link" target="_blank"> Canal do Scareev </a>
+        </article>
+         <article>
+            <h2>Shinejazz (Artes)</h2>
+            <p>porta fringilla eros, nec malesuada magna pharetra in. Proin quis libero facilisis, tristique 
+nulla non, tincidunt nunc. Fusce dignissim commodo arcu vitae dapibus. Morbi convallis orci nunc, 
+quis pellentesque enim varius vitae. Etiam pretium libero quis dapibus hendrerit. Sed et sapien in 
+urna tincidunt fermentum.</p>
+        </article>
+        <article>
+            <h2>Elizabete (Artes)</h2>
+            <p>porta fringilla eros, nec malesuada magna pharetra in. Proin quis libero facilisis, tristique 
+nulla non, tincidunt nunc. Fusce dignissim commodo arcu vitae dapibus. Morbi convallis orci nunc, 
+quis pellentesque enim varius vitae. Etiam pretium libero quis dapibus hendrerit. Sed et sapien in 
+urna tincidunt fermentum.</p>
+        </article>
+         <article>
+            <h2>Tiago (Artes)</h2>
+            <p>"Ai eu sou o tiago e eu do a bunda hihihi"</p>
+        </article>
+        <article>
+            <h2>Júlio (Artes)</h2>
+            <p>porta fringilla eros, nec malesuada magna pharetra in. Proin quis libero facilisis, tristique 
+nulla non, tincidunt nunc. Fusce dignissim commodo arcu vitae dapibus. Morbi convallis orci nunc, 
+quis pellentesque enim varius vitae. Etiam pretium libero quis dapibus hendrerit. Sed et sapien in 
+urna tincidunt fermentum.</p>
+        </article>
+    </section>
+
+    <footer class="downnav">
+    <h1> Versão: Demo</h1>
+    <nav>
+    <p> Github <a href="https://github.com/JkDeltaz/estudio-luna">Aqui</a></p>
+    </nav>
+    </footer>
+
+    {% block body %}{% endblock %}
+</body>
+</html>

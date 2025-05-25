@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> DEVLOG </title>
+        <link rel="icon" type="https://harvstrom.neocities.org/fabiocon2.png" 
+        href="https://harvstrom.neocities.org/fabiocon2.png">
+    <link rel="static/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <header class="topnav">
+        <h1> <a href="/home/index"> Estúdio Luna </a></h1>
+         <nav id="teleport">
+            <a href="/jogos">Jogos</a>
+            <a href="/sobrenos">Sobre nós</a>
+            <a href="/download">Devlog</a>
+        </nav>
+    </header>
+
+  <section class="novidades">
+    <h1> DEVLOG </h1>
+    <article>
+        <h2>25/05/2025 - Primeiros Passos Para o Paranormal...</h2>
+        <p>Estamos desenvolvendo o nosso próximo grande projeto, que terá uma proposta diferente
+            com mecânicas de Point and Click, com uma narrativa misteriosa com personagens
+            de todos os tipos que você imaginar.
+        </p>
+        <p>
+            O jogo se chama <b>Locomotive Breath</b>, e será nosso primeiro jogo totalmente
+            desenhado! Por isto temos vários artistas na equipe.
+        </p>
+        <p>
+            Aqui temos uma imagem do cenário onde ele se passa:
+        </p>
+        <div class="section">
+            <img src="https://harvstrom.neocities.org/bg23.webp" width="300" height="200" alt="Cenário">
+        </div>
+        <p>
+            Enfim, não podemos mostrar muito, queremos que seja uma surpresa bem legal
+            para todos que forem jogar. Até a próxima leak!
+        </p>
+    </article>
+
+    <article>
+        <h2>25/05/2025 - Estúdo Luna, ou Estúdio Tíco?</h2>
+        <p>É a primeira vez fazendo um site para o estúdio, o nome ele surgiu
+            de uma ideia do nosso parceirão Miguel <i>"Shinejazz"</i>, que é um dos
+            nossos artistas e designers da equipe.
+        </p>
+        <p>
+            Então... brevemente iremos postar coisas do nosso próximo jogo, fiquem ligados!
+        </p>
+</section>
+     
+    </section>
+
+    <footer class="downnav">
+    <h1> Versão: Demo</h1>
+    <nav>
+    <p> Github <a href="https://github.com/JkDeltaz/estudio-luna">Aqui</a></p>
+    </nav>
+    </footer>
+
+    {% block body %}{% endblock %}
+</body>
+</html>

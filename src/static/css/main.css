@@ -1,7 +1,32 @@
-body{
+body {
     margin: 0px;
     background-color: #EFEAF6;
     font-family: Roboto Slab;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a:hover {
+    background: #7c6a9e;
+}
+
+.downnav {
+    background-color: #5E4A7E;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-top: auto; 
+}
+
+.downnav h1{
+    margin-left: 1.5%;
+    font-size: medium;
+}
+
+.downnav nav{
+    font-size: medium;
+    margin-left: 80%;
 }
 
 .topnav{
@@ -16,7 +41,7 @@ body{
 }
 
 .topnav h1{
-    margin-left: 2%;
+    margin-left: 1.5%;
 }
 
 .topnav a{
@@ -28,4 +53,36 @@ body{
 
 .topnav a:hover{
     color: #DCD2E8;
+}
+
+.novidades{
+    padding: 20px;
+    margin: 2%;
+    width: 60%;
+
+}
+
+.novidades article {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+a {
+    color: #e6d9d9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9a8cac;
+}
+
+#link{
+    color:#5E4A7E;   
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
 }

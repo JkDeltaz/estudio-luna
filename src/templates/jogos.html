@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JOGOS </title>
+        <link rel="icon" type="https://harvstrom.neocities.org/fabiocon2.png" 
+        href="https://harvstrom.neocities.org/fabiocon2.png">
+    <link rel="static/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <header class="topnav">
+        <h1> <a href="/home/index" id="principal"> Estúdio Luna </a></h1>
+         <nav id="teleport">
+            <a href="/jogos">Jogos</a>
+            <a href="/sobrenos">Sobre nós</a>
+            <a href="/download">Devlog</a>
+        </nav>
+    </header>
+
+    <section class="novidades">
+     <h1> JOGOS </h1>
+
+        <article>
+    <h2>Chronoruptura</h2>
+    <h3>Dec/2023</h3>
+    <p> Luke e seus companheiros formam um grupo de bandidos intertemporais, utilizando 
+        uma van para viajar no tempo e roubar em todas as eras da humanidade. Entretanto, 
+        isso está prestes a mudar quando a van quebra, deixando todos presos em um ponto 
+        aleatório da linha do tempo...
+    </p>
+    <a href="https://jkdelta.itch.io/chronoruptura" target="_blank">
+    <img src="https://img.itch.zone/aW1nLzE0NDE0Mjc3LnBuZw==/original/wNr0zv.png"
+    width="300" height="200">
+    </a>
+    </article>
+
+        <article>
+    <h2>Through The Dungeon (Scratch Edition)</h2>
+    <h3>Mai/2022</h3>
+    <p> Jogo feito para um projeto escolar</p>
+    <a href="https://scratch.mit.edu/projects/690616046/" target="_blank">
+        <img src="https://harvstrom.neocities.org/Screenshot_7.png" width="300" height="200" alt="Through The Dungeon">
+    </a>
+        </article>
+
+        <article> 
+            <h1> Ou jogue por aqui!</h1>
+             <iframe src="https://scratch.mit.edu/projects/690616046/embed" allowtransparency="true" 
+    width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </article>
+
+     </section>
+
+    <footer class="downnav">
+    <h1> Versão: Demo</h1>
+    <nav>
+    <p> Github <a href="https://github.com/JkDeltaz/estudio-luna" target="_blank">Aqui</a></p>
+    </nav>
+    </footer>
+
+    {% block body %}{% endblock %}
+</body>
+</html>

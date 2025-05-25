@@ -9,3 +9,16 @@ app.register_blueprint(home, url_prefix='/home')
 @app.route('/')
 def index():
     return redirect(url_for('home.index'))
+
+@app.route('/sobrenos')
+def sobre_nos():
+    return render_template('sobrenos.html')
+
+@app.route('/download')
+def download():
+    return render_template('download.html')
+
+@app.route('/jogos')
+def jogos():
+    return render_template('jogos.html')
+
