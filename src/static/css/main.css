@@ -69,6 +69,24 @@ body {
     border-radius: 5px;
 }
 
+.novidades2{
+    padding: 20px;
+    margin: 2%;
+    width: 60%;
+    margin: 0 auto;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+}
+
+.novidades2 article {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;   
+}
+
 a {
     color: #e6d9d9;
     text-decoration: none;
@@ -85,4 +103,25 @@ a:hover {
 .section{
     display: flex;
     flex-direction: column;
+}
+
+/* Código Flex que separa os conteúdos em espaços na parte do Nelson-Fight */
+/* Além de que está sendo utilizado na base.html*/
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
 }

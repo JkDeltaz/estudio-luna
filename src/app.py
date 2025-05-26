@@ -22,3 +22,7 @@ def download():
 def jogos():
     return render_template('jogos.html')
 
+@app.route('/nelson-fight')
+def nelson_fight():
+    return render_template('nelson-fight.html')
+
