@@ -1,9 +1,41 @@
 {% extends 'base.html' %}
-
-{% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% block main %}
+    <section class="novidades">
+     <h1>Bem vindo de volta!</h1>
+        <article>
+            <h2>26/05/2025 - Alterações em algumas partes do site</h2>
+            <p>Ontem nós descobrimos várias funcionalidades para o progresso do site, conseguiremos em breve
+               adicionar a portabilidades de alguns jogos para poderem ser jogados por aqui mesmo!
+            </p>
+            <div class="flex">
+                <div class="left">
+                    <p>
+                        Se você quiser testar um jogo nosso <i>(cujo ele não é um lançamento oficial ao público)</i>
+                        vá até ao botão de "Jogos" e veja o último jogo de lá, uma grande supresa!
+                    </p>
+                </div>
+                <div class="right">
+                    <p>
+                        O jogo não é oficial pois é um projeto escolar que foi feito a fins acadêmicos.
+                        Ele está aqui apenas para poder testar se o site consegue rodar os jogos ou não.
+                    </p>
+                </div>
+            </div>
+            <p>
+                <b>Em breve a página estará 100% completa! Até a próxima!</b>
+            </p>
+        </article>
+        <article>
+            <h2>22/05/2025 - Lançamento oficial de Locomotive Breath!</h2>
+            <p>Confira agora o novo projeto da equipe! Um jogo bem misterioso e esquisito sobre comércio
+                de artefatos mágicos, macabros e as vezes até mesmo perigosos. Demo gratuita no link abaixo.
+                <a id="link" href="https://unistory.neocities.org" >Obtenha a demo gratuita!</a>
+            </p>
+        </article>
+             <article>
+            <h2>22/05/2025 - Site Oficial!</h2>
+            <p>Outra coisa é que agora temos um site próprio, não é legal? </p>
+        </article>
+    </section>
 {% endblock %}
 
-
-{% block body %}
-{% endblock %}

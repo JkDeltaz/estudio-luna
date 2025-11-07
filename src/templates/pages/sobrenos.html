@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> SOBRE NÓS </title>
-        <link rel="icon" type="https://harvstrom.neocities.org/fabiocon2.png" 
-        href="https://harvstrom.neocities.org/fabiocon2.png">
-    <link rel="static/css/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-
-
-    {% block head %}{% endblock %}
-</head>
-<body>
-
-    <header class="topnav">
-        <h1> <a href="/home/index"> Estúdio Luna </a></h1>
-         <nav id="teleport">
-            <a href="/jogos">Jogos</a>
-            <a href="/sobrenos">Sobre nós</a>
-            <a href="/download">Devlog</a>
-        </nav>
-    </header>
-
+{% extends 'base.html' %}
+{% block main %}
 
     <section class="novidades">
      <h1> EQUIPE OFICIAL </h1>
@@ -80,15 +56,6 @@ quis pellentesque enim varius vitae. Etiam pretium libero quis dapibus hendrerit
 urna tincidunt fermentum.</p>
         </article>
     </section>
-
-    <footer class="downnav">
-    <h1> Versão: Demo</h1>
-    <nav class="flex">
-    <a href="https://github.com/JkDeltaz/estudio-luna" target="blank"><img src="https://harvstrom.neocities.org/git.png"></a>
-    <a href="https://www.instagram.com/gamestudio_luna/" target="blank"><img src="https://harvstrom.neocities.org/insta.png"></a>
-    </nav>
-    </footer>
-
-    {% block body %}{% endblock %}
+    {% endblock %}
 </body>
 </html>
