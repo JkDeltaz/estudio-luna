@@ -1,8 +1,11 @@
-<header class="topnav">
-    <h1> <a href="{{url_for('home')}}" id="principal"> Estúdio Luna </a></h1>
-    <nav id="teleport">
-        <a href="{{url_for('jogos')}}">Jogos</a>
-        <a href="{{url_for('sobrenos')}}">Sobre nós</a>
-        <a href="{{url_for('devlog')}}">Devlog</a>
-    </nav>
+<header>
+<div class="d-flex align-items-center justify-content-between nav p-4">
+  <a href="{{ url_for('home') }}" class="p-2 linkcolor display-5">Estúdio Luna</a>
+  <div>
+    <a href="{{ url_for('jogos') }}" class="p-2 linkcolor fs-4 border-start">Jogos</a>
+    <a href="{{ url_for('sobrenos') }}" class="p-2 linkcolor fs-4 border-start">Sobre nós</a>
+    <a href="{{ url_for('devlog') }}" class="p-2 linkcolor fs-4 border-start">Devlog</a>
+  </div>
+</div>
+
 </header>
