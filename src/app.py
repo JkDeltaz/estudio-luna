@@ -17,11 +17,11 @@ def sobrenos():
         return redirect(url_for('login'))
     return render_template('pages/sobrenos.html')
 
-@app.route('/devlog')
-def devlog():
+@app.route('/posts')
+def posts():
     if 'usuario' not in session:
         return redirect(url_for('login'))
-    return render_template('pages/devlog.html')
+    return render_template('pages/posts.html')
 
 @app.route('/jogos')
 def jogos():

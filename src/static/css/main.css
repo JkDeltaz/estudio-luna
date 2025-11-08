@@ -4,11 +4,13 @@
     font-family: Roboto Slab;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .paintedbg {
-  background-image: url('https://art.ngfiles.com/medium_views/5092000/5092287_46507_scareev_untitled-5092287.70f1660c6fa5ba06d7df81eadee4cd5e.webp?f16962054657');
-  background-size: 100%;
+    background-image: url('../images/background.png');
+    background-size: 100%;
+    position: relative;
 }
 
 
