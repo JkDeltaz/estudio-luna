@@ -27,14 +27,26 @@ def nelsonfight():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        usuario = request.form['usuario']
+        usuario = request.form.get('usuario')  # ← usa .get() pra evitar erro se faltar
+        senha = request.form.get('senha')
+
+        if not usuario or not senha:
+            erro = "Preencha todos os campos."
+            return render_template('index.html', erro=erro)
+
         with open('static/dados.json', 'r', encoding='utf-8') as f:
             dados = json.load(f)['users']
+
         for info in dados.values():
-            if info['nome'].lower() == usuario.lower():
+            if info['nome'].lower() == usuario.lower() and info['senha'] == senha:
                 tipo = info['tipo']
                 return render_template('pages/access.html', nome=info['nome'], tipo=tipo)
-        return render_template('index.html', nome=None, tipo=None)
+
+        erro = "Usuário ou senha incorretos."
+        return render_template('index.html', erro=erro)
+
+    # GET → mostra o formulário normalmente
+    return render_template('index.html')
 
 
 if __name__ == '__main__':

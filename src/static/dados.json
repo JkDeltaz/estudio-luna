@@ -2,27 +2,33 @@
     "users":{
         "userCaio":{
         "nome": "Caio",
-        "tipo": "ADM"
+        "tipo": "ADM",
+        "senha": "123"
         },
         "userBete":{
         "nome": "Elizabete",
-        "tipo": "ADM"
+        "tipo": "ADM",
+        "senha": "123"
         },
         "userHeitor":{
         "nome": "Heitor",
-        "tipo": "ADM"
+        "tipo": "ADM",
+        "senha": "123"
         },
         "userMiguel":{
         "nome": "Miguel",
-        "tipo": "ADM"
+        "tipo": "ADM",
+        "senha": "123"
         },
         "userJulio":{
         "nome": "Júlio",
-        "tipo": "ADM"
+        "tipo": "ADM",
+        "senha": "123"
         },
         "userTiago":{
         "nome": "Tiago",
-        "tipo": "ADM"
+        "tipo": "ADM",
+        "senha": "123"
         }
     }
 }
