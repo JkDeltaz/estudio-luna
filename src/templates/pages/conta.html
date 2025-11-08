@@ -1,11 +1,37 @@
 {% extends 'base.html'%}
 {% block main %}
-<div class="novidades p-2 m-5">
+<div class="novidades p-2 m-5 bg-light">
 <article class="mb-5">
-    <h1>Bem-vindo, {{ nome }}!</h1>
-    <h4>Você é um {{ tipo }}</h4>
-    <p>Cargo: {{ cargo }}</p>
+    <div class="d-flex justify-content-center">
+        <img src="{{ url_for('static', filename='images/icon.png') }}" 
+        alt="Avatar de {{ nome }}" 
+        class="rounded-circle mb-3" width="120">   
+    </div>
+    
+<div style="grid-template-columns: 2fr 1fr;" class="d-grid gap-0 column-gap-3">
+        <div class="novidades p-2 m-1">
+            <h1 class="border-3 border-bottom">{{ nome }} 
+                <span><h4>{{ cargo }} / <span style="color:rgb(86, 64, 211)">{{ tipo }}</span></h4></span>
+            </h1>
+
+            <h4>Descrição:</h4>
+            <p>{{ descricao }}</p>
+            <h4 class="border-3 border-bottom">Redes sociais:</h4>
+            <ul>
+                <li>PLACEHOLDER</li>
+                <li>PLACEHOLDER</li>
+                <li>PLACEHOLDER</li>
+            </ul>
+        </div>
+
+        <div class="novidades p-2 m-1">
+            <h1 class="border-3 border-bottom">Ações:</h1>
+            <a href="{{ url_for('editar_perfil')}}" class="btn btn-success">Mudar descrição</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Sair da conta</a>
+        </div>
+    </div>
+    
 </article>
-<a href="{{ url_for('logout') }}" class="btn btn-danger">Sair</a>
+
 </div>
 {% endblock %}

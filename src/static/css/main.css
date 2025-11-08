@@ -4,7 +4,6 @@
     font-family: Roboto Slab;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .paintedbg {
@@ -31,7 +30,6 @@
 }
 
 .novidades{
-    width: 60%;
     border: 2px solid #ddd;
     border-radius: 5px;
 }

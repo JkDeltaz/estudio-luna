@@ -16,6 +16,7 @@ class Usuario(db.Model):
     senha = db.Column(db.String(20), nullable=False)
     tipo = db.Column(db.String(20))
     cargo = db.Column(db.String(20))
+    descricao = db.Column(db.Text)
 
 # Rotas principais
 
@@ -53,12 +54,17 @@ def nelsonfight():
 def conta():
     if 'usuario' not in session:
         return redirect(url_for('login'))
+    
+    usuario = Usuario.query.filter_by(nome=session['usuario']).first()
+    
     return render_template(
         'pages/conta.html',
-        nome=session.get('usuario'),
-        tipo=session.get('tipo'),
-        cargo=session.get('cargo')
+        nome=usuario.nome,
+        tipo=usuario.tipo,
+        cargo=usuario.cargo,
+        descricao=usuario.descricao
     )
+
 
 # Login
 
@@ -117,6 +123,20 @@ def cadastro():
 
     return render_template('cadastro.html')
 
+@app.route('/editar_perfil', methods=['GET', 'POST'])
+def editar_perfil():
+    if 'usuario' not in session:
+        return redirect(url_for('login'))
+    
+    usuario = Usuario.query.filter_by(nome=session['usuario']).first()
+    
+    if request.method == 'POST':
+        nova_descricao = request.form['descricao']
+        usuario.descricao = nova_descricao
+        db.session.commit()
+        return redirect(url_for('conta'))  # volta pro perfil
+
+    return render_template('pages/editar_perfil.html', usuario=usuario)
 # Logout
 
 @app.route('/logout')

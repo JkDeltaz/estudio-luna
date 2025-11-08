@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="p-2 m-5 novidades">
+    <h4>Editar perfil de {{ usuario.nome }}</h4>
+    <p>Atualize as informações do seu perfil abaixo.</p>
+
+    <form method="POST" action="{{ url_for('editar_perfil') }}">
+        <textarea name="descricao" rows="5" class="form-control" placeholder="Digite sua nova descrição...">{{ usuario.descricao or '' }}</textarea>
+
+        <br>
+        <input type="submit" value="Salvar alterações" class="btn btn-success">
+    </form>
+
+    <p style="margin-top:10px;">
+        <a href="{{ url_for('conta') }}">← Voltar ao perfil</a>
+    </p>
+
+    {% if erro %}
+        <p style="color:red;">{{ erro }}</p>
+    {% endif %}
+    {% if sucesso %}
+        <p style="color:lightgreen;">{{ sucesso }}</p>
+    {% endif %}
+</div>
+{% endblock %}
