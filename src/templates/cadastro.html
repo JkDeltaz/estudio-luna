@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="p-2 m-5 novidades">
+    <h4>Crie sua conta no Estúdio Luna!</h4>
+    <p> Preencha os campos abaixo para registrar seu acesso ao site.</p>
+
+    <form method="POST" action="/cadastro">
+        <input type="text" name="usuario" placeholder="Usuário" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="text" name="tipo" placeholder="Tipo (ex: adm ou comum)">
+        <input type="text" name="cargo" placeholder="Cargo (ex: dono, dev, etc)">
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    {% if erro %}
+        <p style="color: red;">{{ erro }}</p>
+    {% endif %}
+    {% if sucesso %}
+        <p style="color: lightgreen;">{{ sucesso }}</p>
+    {% endif %}
+
+    <p>Já possui uma conta? <a href="{{ url_for('login') }}">Entre agora!</a></p>
+</div>
+{% endblock %}
