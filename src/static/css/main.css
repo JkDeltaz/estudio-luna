@@ -23,18 +23,11 @@
 }
 
 .novidades{
-    padding: 20px;
-    margin: 2%;
     width: 60%;
-
-}
-
-.novidades article {
-    margin-bottom: 30px;
-    padding: 20px;
     border: 2px solid #ddd;
     border-radius: 5px;
 }
+
 
 .novidades2{
     padding: 20px;

@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 {% block main %}
-    <section class="novidades">
-     <h1>Bem vindo de volta!</h1>
+
+<main class="">
+    <div class="p-2 m-5 novidades">
+        <form method="post" action="/login">
+            <input type="text" name="usuario" placeholder="Seu nome">
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+
+    <section class="novidades p-2 m-5">
      <article>
         <h2 class="border-3 border-bottom"> 07/11/2025 - Caramba... Quanto tempo! <span class="fs-5 text-success-emphasis bg-success"> NOVO! </span></h2> 
         <p> Nós do estúdio Luna resolvemos dar uma reformada no site... Ele é open source como visto no nosso footer, o link do github está lá!</p>
@@ -10,7 +18,7 @@
         <p> É perceptivel que a gente voltou depois de meses na produção do site, pois no meio deste ano, maioria da equipe entrou na faculdade, então quebrou muito
             o workflow de trabalhar neste projeto do site, mas ele vai continuar! Esperem por mais atualizações </p>
      </article>
-        <article>
+        <article class="mt-5">
             <h2 class="border-3 border-bottom">26/05/2025 - Alterações em algumas partes do site</h2>
             <p>Ontem nós descobrimos várias funcionalidades para o progresso do site, conseguiremos em breve
                adicionar a portabilidades de alguns jogos para poderem ser jogados por aqui mesmo!
@@ -33,17 +41,18 @@
                 <b>Em breve a página estará 100% completa! Até a próxima!</b>
             </p>
         </article>
-        <article>
+        <article class="mt-5">
             <h2 class="border-3 border-bottom">22/05/2025 - Lançamento oficial de Locomotive Breath!</h2>
             <p>Confira agora o novo projeto da equipe! Um jogo bem misterioso e esquisito sobre comércio
                 de artefatos mágicos, macabros e as vezes até mesmo perigosos. Demo gratuita no link abaixo.
                 <a id="link" href="https://unistory.neocities.org" >Obtenha a demo gratuita!</a>
             </p>
         </article>
-             <article>
+             <article class="mt-5">
             <h2 class="border-3 border-bottom">22/05/2025 - Site Oficial!</h2>
             <p>Outra coisa é que agora temos um site próprio, não é legal? </p>
         </article>
     </section>
+</main>
 {% endblock %}
 

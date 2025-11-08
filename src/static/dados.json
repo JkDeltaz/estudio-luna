@@ -1,0 +1,28 @@
+{
+    "users":{
+        "userCaio":{
+        "nome": "Caio",
+        "tipo": "ADM"
+        },
+        "userBete":{
+        "nome": "Elizabete",
+        "tipo": "ADM"
+        },
+        "userHeitor":{
+        "nome": "Heitor",
+        "tipo": "ADM"
+        },
+        "userMiguel":{
+        "nome": "Miguel",
+        "tipo": "ADM"
+        },
+        "userJulio":{
+        "nome": "Júlio",
+        "tipo": "ADM"
+        },
+        "userTiago":{
+        "nome": "Tiago",
+        "tipo": "ADM"
+        }
+    }
+}
