@@ -1,34 +1,40 @@
 {
-    "users":{
-        "userCaio":{
-        "nome": "Caio",
-        "tipo": "ADM",
-        "senha": "123"
+    "users": {
+        "userCaio": {
+            "nome": "Caio",
+            "tipo": "Administrador",
+            "cargo": "Programador",
+            "senha": "123"
         },
-        "userBete":{
-        "nome": "Elizabete",
-        "tipo": "ADM",
-        "senha": "123"
+        "userBete": {
+            "nome": "Elizabete",
+            "tipo": "Administrador",
+            "cargo": "Artista 3D e Programadora",
+            "senha": "123"
         },
-        "userHeitor":{
-        "nome": "Heitor",
-        "tipo": "ADM",
-        "senha": "123"
+        "userHeitor": {
+            "nome": "Heitor",
+            "tipo": "Administrador",
+            "cargo": "Músico",
+            "senha": "123"
         },
-        "userMiguel":{
-        "nome": "Miguel",
-        "tipo": "ADM",
-        "senha": "123"
+        "userMiguel": {
+            "nome": "Miguel",
+            "tipo": "Administrador",
+            "cargo": "Artista 2D",
+            "senha": "123"
         },
-        "userJulio":{
-        "nome": "Júlio",
-        "tipo": "ADM",
-        "senha": "123"
+        "userJulio": {
+            "nome": "Júlio",
+            "tipo": "Administrador",
+            "cargo": "Artista 2D",
+            "senha": "123"
         },
-        "userTiago":{
-        "nome": "Tiago",
-        "tipo": "ADM",
-        "senha": "123"
+        "userTiago": {
+            "nome": "Tiago",
+            "tipo": "Artista 2D",
+            "cargo": "Programador",
+            "senha": "123"
         }
     }
 }

@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% block main %}
+<div class="p-2 m-5 novidades">
+    <h4>Bem-vindo ao site oficial do Estúdio Luna!</h4>
+    <p> O site está em versão de testes, apenas contas pré-selecionadas podem acessar o site.</p>
+    <form method="post" action="/login">
+        <input type="text" name="usuario" placeholder="Seu nome">
+        <input type="password" name="senha" placeholder="Sua senha">
+        <input type="submit" value="Entrar">
+    </form>
+{% if erro %}
+<p style="color: red;">{{ erro }}</p>
+{% endif %}
+</div>
+{% endblock %}
+

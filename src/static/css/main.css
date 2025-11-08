@@ -6,6 +6,12 @@
     flex-direction: column;
 }
 
+.paintedbg {
+  background-image: url('https://art.ngfiles.com/medium_views/5092000/5092287_46507_scareev_untitled-5092287.70f1660c6fa5ba06d7df81eadee4cd5e.webp?f16962054657');
+  background-size: 100%;
+}
+
+
 .nav {
     background-color: #5E4A7E;
     color: #FFFFFF;
