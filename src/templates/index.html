@@ -1,53 +1,28 @@
 {% extends 'base.html' %}
 {% block main %}
+<h1 class="p-2 mt-5 ms-5"> Olá, {{nome}}!</h1>
 
-<main class="">
+    <div class="novidades p-2 m-5 text-center bg-light chronobg">
+        <img src="{{ url_for('static', filename='images/chronoruptura/arvore.gif')}}" height="150px" width="150px">
+        <a href="https://jkdelta.itch.io/chronoruptura" target="_blank">
+        <img src="https://img.itch.zone/aW1hZ2UvMjQzNDMwNi8xNDQxNDIxNC5wbmc=/original/uh8Sf5.png" height="400px" width="800px" class="p-4 m-2 shadow-lg"> 
+        </a>
+        <img src="{{ url_for('static', filename='images/chronoruptura/arvore2.gif')}}" height="150px" width="150px">
+        <h2 class="p-4 text-white"  style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">CHRONORUPTURA: JOGUE AGORA!</h2>
+        <h5 class="text-white"> Um jogo de terror feito para a gamejam do Todddyn, vai encarar paizão?</h5>
+        <div class="d-flex justify-content-between">
+            <img src="{{ url_for('static', filename='images/chronoruptura/demoniraptor_2.gif')}}" height="150px" width="150px">
+            <img src="{{ url_for('static', filename='images/chronoruptura/fogueira.gif')}}" height="150px" width="150px">
 
+        </div>
+    </div>
 
-    <section class="novidades p-2 m-5">
-     <article>
-        <h2 class="border-3 border-bottom"> 07/11/2025 - Caramba... Quanto tempo! <span class="fs-5 text-success-emphasis bg-success"> NOVO! </span></h2> 
-        <p> Nós do estúdio Luna resolvemos dar uma reformada no site... Ele é open source como visto no nosso footer, o link do github está lá!</p>
-        <p> Bem... Ainda estamos programando o site para que ele seja 100% incrível 😀, então tem muita coisa aqui que a gente planeja colocar, mas já da para 
-            jogar muitos dos nossos jogos aqui que estão postados na web ou em algum canto especifico. </p>
-        <p> É perceptivel que a gente voltou depois de meses na produção do site, pois no meio deste ano, maioria da equipe entrou na faculdade, então quebrou muito
-            o workflow de trabalhar neste projeto do site, mas ele vai continuar! Esperem por mais atualizações </p>
-     </article>
-        <article class="mt-5">
-            <h2 class="border-3 border-bottom">26/05/2025 - Alterações em algumas partes do site</h2>
-            <p>Ontem nós descobrimos várias funcionalidades para o progresso do site, conseguiremos em breve
-               adicionar a portabilidades de alguns jogos para poderem ser jogados por aqui mesmo!
-            </p>
-            <div class="flex">
-                <div class="left">
-                    <p>
-                        Se você quiser testar um jogo nosso <i>(cujo ele não é um lançamento oficial ao público)</i>
-                        vá até ao botão de "Jogos" e veja o último jogo de lá, uma grande supresa!
-                    </p>
-                </div>
-                <div class="right">
-                    <p>
-                        O jogo não é oficial pois é um projeto escolar que foi feito a fins acadêmicos.
-                        Ele está aqui apenas para poder testar se o site consegue rodar os jogos ou não.
-                    </p>
-                </div>
-            </div>
-            <p>
-                <b>Em breve a página estará 100% completa! Até a próxima!</b>
-            </p>
-        </article>
-        <article class="mt-5">
-            <h2 class="border-3 border-bottom">22/05/2025 - Lançamento oficial de Locomotive Breath!</h2>
-            <p>Confira agora o novo projeto da equipe! Um jogo bem misterioso e esquisito sobre comércio
-                de artefatos mágicos, macabros e as vezes até mesmo perigosos. Demo gratuita no link abaixo.
-                <a id="link" href="https://unistory.neocities.org" >Obtenha a demo gratuita!</a>
-            </p>
-        </article>
-             <article class="mt-5">
-            <h2 class="border-3 border-bottom">22/05/2025 - Site Oficial!</h2>
-            <p>Outra coisa é que agora temos um site próprio, não é legal? </p>
-        </article>
-    </section>
-</main>
+    <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 column-gap-3">
+        <article class="novidades p-2 m-5 bg-light">
+        <h3> Últimas atualizações: </h3>
+        <h6> Primeiro post?</h6>
+        </article>  
+    </div>
+
 {% endblock %}
 
