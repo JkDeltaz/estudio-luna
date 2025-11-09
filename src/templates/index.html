@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% block main %}
-<h1 class="p-2 mt-5 ms-5"> Olá, {{nome}}!</h1>
-
     <div class="novidades p-2 m-5 text-center bg-light chronobg">
         <img src="{{ url_for('static', filename='images/chronoruptura/arvore.gif')}}" height="150px" width="150px">
         <a href="https://jkdelta.itch.io/chronoruptura" target="_blank">
@@ -19,8 +17,13 @@
 
     <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 column-gap-3">
         <article class="novidades p-2 m-5 bg-light">
-        <h3> Últimas atualizações: </h3>
+        <h3 class="border-3 border-bottom"> Últimas atualizações 💬</h3>
         <h6> Primeiro post?</h6>
+        </article>  
+        <article class="novidades p-2 m-5 bg-light">
+        <h3 class="border-3 border-bottom"> Jogos 🎮 </h3>
+        <h6> Primeiro post?</h6>
+        <p> Talvez segundo?</p>
         </article>  
     </div>
 
