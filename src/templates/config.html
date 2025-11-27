@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block main %}
+<main class="">
+
+
+    <section class="novidades p-2 m-5">
+     <article>
+        <h2 class="border-3 border-bottom"> Configurações</h2> 
+            <form method="POST" action="{{ url_for('config') }}">
+            <input type="submit" value="{% if theme == 'dark' %}Ativar Light Mode{% else %}Ativar Dark Mode{% endif %}" class="btn {% if theme == 'dark' %}btn-warning{% else %}btn-success{% endif %}">
+        </form>
+    {% if erro %}
+        <p style="color:red;">{{ erro }}</p>
+    {% endif %}
+    {% if sucesso %}
+        <p style="color:lightgreen;">{{ sucesso }}</p>
+    {% endif %}
+     </article>
+</main>
+{% endblock %}
+
+
+</html>

@@ -6,10 +6,12 @@
 
     <form method="POST" action="{{ url_for('editar_perfil') }}">
         <textarea name="descricao" rows="5" class="form-control" placeholder="Digite sua nova descrição...">{{ usuario.descricao or '' }}</textarea>
+        <textarea name="redes_sociais" rows="4" class="form-control" placeholder="Digite suas redes sociais...">{{ usuario.redes_sociais or '' }}</textarea>
 
         <br>
         <input type="submit" value="Salvar alterações" class="btn btn-success">
     </form>
+
 
     <p style="margin-top:10px;">
         <a href="{{ url_for('conta') }}">← Voltar ao perfil</a>
@@ -20,6 +22,19 @@
     {% endif %}
     {% if sucesso %}
         <p style="color:lightgreen;">{{ sucesso }}</p>
+    {% endif %}
+
+    <h4 class="border-3 border-bottom">Redes sociais:</h4>
+    {% if redes_sociais %}
+        <ul>
+            {% for rede in redes_sociais.split('\n') %}
+                {% if rede.strip() %}
+                    <li><a href="{{ rede.strip() }}" target="_blank">{{ rede.strip() }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhuma rede social adicionada ainda.</p>
     {% endif %}
 </div>
 {% endblock %}

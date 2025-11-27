@@ -23,13 +23,19 @@
 <div style="grid-template-columns: 2fr 1fr;" class="d-grid gap-0 column-gap-3">
         <div class="novidades p-2 m-1">
             <h4 class="border-3 border-bottom">Descrição:</h4>
-            <p>{{ descricao }}</p>
+            <p>{{ descricao or 'Nenhuma descrição ainda.' }}</p>
             <h4 class="border-3 border-bottom">Redes sociais:</h4>
-            <ul>
-                <li>PLACEHOLDER</li>
-                <li>PLACEHOLDER</li>
-                <li>PLACEHOLDER</li>
-            </ul>
+            {% if redes_sociais %}
+                <ul>
+                    {% for rede in redes_sociais.split('\n') %}
+                        {% if rede.strip() %}
+                            <li><a href="{{ rede.strip() }}" target="_blank">{{ rede.strip() }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Nenhuma rede social adicionada ainda.</p>
+            {% endif %}
         </div>
         <div class="novidades p-2 m-1 ">
             <h4 class="border-3 border-bottom">Atividade:</h4>

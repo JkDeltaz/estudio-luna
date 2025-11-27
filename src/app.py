@@ -12,11 +12,12 @@ db = SQLAlchemy(app)
 # Modelo da tabela de usuários
 class Usuario(db.Model):
     id = db.Column(db.Integer, primary_key=True) 
-    nome = db.Column(db.String(30), unique=True, nullable=False)
-    senha = db.Column(db.String(20), nullable=False)
-    tipo = db.Column(db.String(20))
-    cargo = db.Column(db.String(20))
-    descricao = db.Column(db.Text)
+    nome = db.Column(db.String(100), unique=True, nullable=False)
+    senha = db.Column(db.String(100), nullable=False)
+    tipo = db.Column(db.String(50))
+    cargo = db.Column(db.String(50))
+    descricao = db.Column(db.Text)  
+    redes_sociais = db.Column(db.Text) 
 
 # Rotas principais
 
@@ -24,31 +25,46 @@ class Usuario(db.Model):
 def home():
     if 'usuario' not in session:
         return redirect(url_for('login'))
-    return render_template('index.html', nome=session['usuario'])
+    return render_template('index.html', nome=session['usuario'], theme=session.get('theme', 'light'))
+
+@app.route('/config', methods=['GET', 'POST'])
+def config():
+    if 'usuario' not in session:
+        return redirect(url_for('login'))
+    
+    if request.method == 'POST':
+        current_theme = session.get('theme', 'light')
+        new_theme = 'dark' if current_theme == 'light' else 'light'
+        session['theme'] = new_theme
+        
+        sucesso = f"{'Dark' if new_theme == 'dark' else 'Light'} mode ativado!"
+        return render_template('config.html', sucesso=sucesso, theme=new_theme)
+    
+    return render_template('config.html', theme=session.get('theme', 'light'))
 
 @app.route('/sobrenos')
 def sobrenos():
     if 'usuario' not in session:
         return redirect(url_for('login'))
-    return render_template('pages/sobrenos.html')
+    return render_template('pages/sobrenos.html', theme=session.get('theme', 'light'))
 
 @app.route('/posts')
 def posts():
     if 'usuario' not in session:
         return redirect(url_for('login'))
-    return render_template('pages/posts.html')
+    return render_template('pages/posts.html', theme=session.get('theme', 'light'))
 
 @app.route('/jogos')
 def jogos():
     if 'usuario' not in session:
         return redirect(url_for('login'))
-    return render_template('pages/jogos.html')
+    return render_template('pages/jogos.html', theme=session.get('theme', 'light'))
 
 @app.route('/nelson-fight')
 def nelsonfight():
     if 'usuario' not in session:
         return redirect(url_for('login'))
-    return render_template('pages/nelson-fight.html')
+    return render_template('pages/nelson-fight.html', theme=session.get('theme', 'light'))
 
 @app.route('/conta')
 def conta():
@@ -57,12 +73,17 @@ def conta():
     
     usuario = Usuario.query.filter_by(nome=session['usuario']).first()
     
+    if not usuario:
+        return redirect(url_for('login'))
+    
     return render_template(
         'pages/conta.html',
         nome=usuario.nome,
         tipo=usuario.tipo,
         cargo=usuario.cargo,
-        descricao=usuario.descricao
+        descricao=usuario.descricao,
+        redes_sociais=usuario.redes_sociais,
+        theme=session.get('theme', 'light')
     )
 
 
@@ -130,13 +151,18 @@ def editar_perfil():
     
     usuario = Usuario.query.filter_by(nome=session['usuario']).first()
     
+    if not usuario:
+        return redirect(url_for('login'))
+    
     if request.method == 'POST':
         nova_descricao = request.form['descricao']
+        nova_redes_sociais = request.form['redes_sociais']
         usuario.descricao = nova_descricao
+        usuario.redes_sociais = nova_redes_sociais
         db.session.commit()
         return redirect(url_for('conta'))  # volta pro perfil
 
-    return render_template('pages/editar_perfil.html', usuario=usuario)
+    return render_template('pages/editar_perfil.html', usuario=usuario, theme=session.get('theme', 'light'))
 # Logout
 
 @app.route('/logout')

@@ -16,8 +16,8 @@
     background-image: 
         linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
         url('https://art.ngfiles.com/images/7138000/7138105_2554181_shinejazz_untitled-7138105.d5a0656e976ae9ca3ee51da5308716f1.webp?f1761247630');
-    background-size: cover;       /* cobre toda a tela */
-    background-position: center;  /* centraliza */
+    background-size: cover;     
+    background-position: center; 
     background-repeat: no-repeat;
     position: relative;
 }
@@ -95,4 +95,72 @@ a:hover {
   width: 45%;
   display: flex;
   flex-direction: column;
+}
+
+/* DARK MODE */
+.dark {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.dark * {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+.dark a {
+    color: #4fc3f7 !important;
+}
+
+.dark a:hover {
+    color: #29b6f6 !important;
+}
+
+.dark .body {
+    background-color: #1e1e1e !important;
+}
+
+.dark .paintedbg {
+    background-image: none !important;
+    background-color: #121212 !important;
+}
+
+.dark .nav {
+    background-color: #2d2d2d !important;
+}
+
+.dark .footer {
+    background-color: #2d2d2d !important;
+}
+
+.dark .novidades,
+.dark .novidades2,
+.dark .novidades2 article {
+    background-color: #1e1e1e !important;
+    border-color: #444444 !important;
+}
+
+.dark .linkcolor {
+    color: #4fc3f7 !important;
+}
+
+.dark .nav a,
+.dark .footer a,
+.dark a {
+    background-color: transparent !important;
+    text-decoration: none !important;
+}
+
+.dark .nav .linkcolor {
+    background-color: transparent !important;
+    color: #4fc3f7 !important;
+}
+
+.dark .footer a {
+    background-color: transparent !important;
+}
+
+.dark footer img {
+    background-color: transparent !important;
 }
